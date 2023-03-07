@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Home type - building – {{ serviceName }} – GOV.UK Prototype Kit
+Home type - building information – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -24,7 +24,7 @@ Home type - building – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
     <h1 class="govuk-heading-l">Building information</h1>
-    <form action="/start" method="post" novalidate>
+    <form action="/home-type-wheelchair-standards" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
