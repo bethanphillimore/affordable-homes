@@ -4,6 +4,8 @@
 GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+
+
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -15,6 +17,8 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     </span>
   </p>
 </div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
 {% endblock %}
 
 
@@ -23,8 +27,8 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8
   ">
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-      Apply for grant funding</h1>
-    <p class="govuk-body-l">Manage your affordable housing grant funding applications</p>
+      CME applications</h1>
+    <p class="govuk-body-l">Create and manage CME sites to apply for funding through a scheme by scheme basis</p>
 
 
 
@@ -33,15 +37,16 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 
   <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
     <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-      <a href="CME-applications.html">CME applications</a>
+      <a href="check-provider.html">Create a new CME application</a>
     </h3>
-    <p class="govuk-body">Scheme by scheme bidding through continuous market engagement (CME).</p>
+    <p class="govuk-body">For a new application you will be asked to create a new site and then add schemes to the site.
+    </p>
   </section>
   <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
     <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-      <a href="">RSAP applications</a>
+      <a href="">View existing CME sites</a>
     </h3>
-    <p class="govuk-body">The rough sleeping accommodation programme (RSAP) provides support for rough sleepers.</p>
+    <p class="govuk-body">View and edit your existing CME sites.</p>
   </section>
 
 </div>
