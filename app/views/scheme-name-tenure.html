@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Scheme name and tenure – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Scheme name and tenure</h1>
+        <form action="/scheme" method="post" novalidate>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="scheme-name">
+              Scheme name
+            </label>
+            <div id="scheme-name-hint" class="govuk-hint">
+              You should make this something that will help you differentiate it from your other schemes within your site. For example, Village Way.
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="scheme-name" name="scheme-name" type="text" aria-describedby="scheme-name-hint">
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="scheme-tenure-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Scheme tenure
+              </legend>
+              <div id="scheme-tenure-hint" class="govuk-hint">
+                The scheme tenure will affect the questions you're asked so make sure you select the right one.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="affordable-rent" name="affordable-rent" type="radio" value="affordable rent">
+                  <label class="govuk-label govuk-radios__label" for="affordable-rent">
+                    Affordable rent
+                  </label>
+                  <div id="affordable-rent-hint" class="govuk-hint govuk-radios__hint">
+                    Homes let at below market rent by a registered provider. The rent, including service charge, is set at up to 80% of the local market rent for an equivalent home.
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="social-rent" name="social-rent" type="radio" value="social rent">
+                  <label class="govuk-label govuk-radios__label" for="social-rent">
+                    Social rent
+                  </label>
+                  <div id="social-rent-hint" class="govuk-hint govuk-radios__hint">
+                    Social rent is low-cost rental social housing that is let at below market rent by a registered provider based on a formula set by the government.
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="shared-ownership" name="shared-ownership" type="radio" value="shared ownership">
+                  <label class="govuk-label govuk-radios__label" for="shared-ownership">
+                    Shared ownership
+                  </label>
+                  <div id="shared-ownership-hint" class="govuk-hint govuk-radios__hint">
+                    Shared ownership allows a customer to purchase a share of a home and pay rent on the remaining share.
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="rent-to-buy" name="rent-to-buy" type="radio" value="rent to buy">
+                  <label class="govuk-label govuk-radios__label" for="rent-to-buy">
+                    Rent to buy
+                  </label>
+                  <div id="rent-to-buy-hint" class="govuk-hint govuk-radios__hint">
+                    Homes let to working households at a lower cost to give them the opportunity to save for a deposit to buy their first home.
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+{% endblock %}
