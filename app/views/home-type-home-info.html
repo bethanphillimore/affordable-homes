@@ -1,0 +1,171 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
+    <h1 class="govuk-heading-l">Home information</h1>
+    <form action="/form-handler" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="home-number">
+          How many homes are in this home type?
+        </label>
+        <div id="home-number-hint" class="govuk-hint">
+          Enter the number of homes. For example, 20.
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="home-number" name="home-number" type="text"
+          aria-describedby="home-number-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="bedroom-numberr">
+          How many bedrooms are there in each home?
+        </label>
+        <div id="bedroom-number-hint" class="govuk-hint">
+          Enter the number of bedrooms. For example, 3.
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="bedroom-number" name="bedroom-number" type="text"
+          aria-describedby="bedroom-number-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="max-people">
+          What is the maximum number of people who will live in this home?
+        </label>
+        <div id="max-people-hint" class="govuk-hint">
+          Enter the maximum number of people.. For example, 6.
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="max-people" name="max-people" type="text"
+          aria-describedby="max-people-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="storeys-number">
+          Enter the number of storeys.
+        </label>
+        <div id="storeys-number-hint" class="govuk-hint">
+          Enter the number of storeys. For example, 2.
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="storeys-number" name="storeys-number" type="text"
+          aria-describedby="storeys-number-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="move-on-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are these homes intended as move-on accommodation?
+          </legend>
+          <div id="move-on-hint" class="govuk-hint">
+            Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
+            independent living.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="move-on-yes" name="type-general" type="radio" value="general">
+              <label class="govuk-label govuk-radios__label" for="type-general">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
+                value="housing for older people">
+              <label class="govuk-label govuk-radios__label" for="type-older-people">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are these homes intended as move-on accommodation?
+          </legend>
+          <div id="housing-type-hint" class="govuk-hint">
+            Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
+            independent living.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
+              <label class="govuk-label govuk-radios__label" for="type-general">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
+                value="housing for older people">
+              <label class="govuk-label govuk-radios__label" for="type-older-people">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are these homes intended as move-on accommodation?
+          </legend>
+          <div id="housing-type-hint" class="govuk-hint">
+            Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
+            independent living.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
+              <label class="govuk-label govuk-radios__label" for="type-general">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
+                value="housing for older people">
+              <label class="govuk-label govuk-radios__label" for="type-older-people">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

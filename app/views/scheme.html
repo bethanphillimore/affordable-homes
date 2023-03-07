@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Scheme 1: affordable rent – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {{ data['scheme-name'] }}: affordable rent
+    </h1>
+
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Scheme incomplete</h2>
+    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 4 sections.</p>
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Enter home information
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/home-type-name-and-housing" aria-describedby="home-types-status">
+                Home types
+              </a>
+            </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="home-types-status">Not started</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Enter scheme application
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="finanical-details-status">
+                Financial details
+              </a>
+            </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-details-status">Not started
+              yet</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="planning-details-status">
+                Planning details
+              </a>
+            </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="planning-details-status">Not started
+              yet</strong>
+          </li>
+
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span> Enter delivery information
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              Delivery phases
+            </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="delivery-phases-status">Cannot start
+              yet</strong>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+
+    <div class="govuk-inset-text">
+      Save and exit to view and submit schemes. You must complete all the sections before you can submit your application.
+    </div>
+
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Save and exit
+    </button>
+  </div>
+</div>
+
+{% endblock %}
