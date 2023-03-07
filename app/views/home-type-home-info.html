@@ -23,7 +23,7 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
     <h1 class="govuk-heading-l">Home information</h1>
-    <form action="/form-handler" method="post" novalidate>
+    <form action="/home-type-home-information-conditional" method="post" novalidate>
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="home-number">
           How many homes are in this home type?
@@ -68,6 +68,7 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
           aria-describedby="storeys-number-hint">
       </div>
 
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="move-on-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -79,15 +80,15 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="move-on-yes" name="type-general" type="radio" value="general">
+              <input class="govuk-radios__input" id="move-on-yes" name="move-on-yes" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="type-general">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
-                value="housing for older people">
-              <label class="govuk-label govuk-radios__label" for="type-older-people">
+              <input class="govuk-radios__input" id="move-on-no" name="move-on-no" type="no"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="move-on-no">
                 No
               </label>
             </div>
@@ -99,25 +100,24 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="reconstruct-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Are these homes intended as move-on accommodation?
+            Will you be reconstructing existing residential homes to increase number of homes?
           </legend>
-          <div id="housing-type-hint" class="govuk-hint">
-            Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
-            independent living.
+          <div id="reconstruct-hint" class="govuk-hint">
+            Select ‘yes’ if you will reconstruct existing homes.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
-              <label class="govuk-label govuk-radios__label" for="type-general">
+              <input class="govuk-radios__input" id="reconstruct-yes" name="reconstruct-yes" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="reconstruct-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
-                value="housing for older people">
-              <label class="govuk-label govuk-radios__label" for="type-older-people">
+              <input class="govuk-radios__input" id="reconstruct-no" name="reconstruct-no" type="radio"
+                value="reconstruct-no">
+              <label class="govuk-label govuk-radios__label" for="reconstruct-no">
                 No
               </label>
             </div>
@@ -129,25 +129,24 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="needs-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Are these homes intended as move-on accommodation?
+            Are these homes designed to meet the needs of a particular group?
           </legend>
-          <div id="housing-type-hint" class="govuk-hint">
-            Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
-            independent living.
+          <div id="needs-hint" class="govuk-hint">
+            Select ‘yes’ if the homes will be for a particular group of people.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
-              <label class="govuk-label govuk-radios__label" for="type-general">
+              <input class="govuk-radios__input" id="part-needs-yes" name="part-needs-yes" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="part-needs-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio"
-                value="housing for older people">
-              <label class="govuk-label govuk-radios__label" for="type-older-people">
+              <input class="govuk-radios__input" id="part-needs-no" name="part-needs-no" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="part-needs-no">
                 No
               </label>
             </div>
@@ -158,7 +157,7 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
 
 
       <button class="govuk-button" data-module="govuk-button">
-        Continue
+        Save and continue
       </button>
     </form>
   </div>

@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home type - building – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
+    <h1 class="govuk-heading-l">Building information</h1>
+    <form action="/start" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            What is the building type?
+          </legend>
+          <div id="housing-type-hint" class="govuk-hint">
+            Select one option.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
+              <label class="govuk-label govuk-radios__label" for="type-general">
+                House
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="building-flat" name="building-flat" type="radio" value="flat"
+                aria-describedby="building-flat-hint">
+              <label class="govuk-label govuk-radios__label" for="building-flat">
+                Flat
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="building-bedsit" name="building-bedsit" type="radio" value="bedsit"
+                aria-describedby="building-bedsit-hint">
+              <label class="govuk-label govuk-radios__label" for="building-bedsit">
+                Bedsit
+              </label>
+              <div id="building-bedsit-hint" class="govuk-hint govuk-radios__hint">
+                Single unit within a shared property </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="building-bungalow" name="building-bungalow" type="radio" value="bungalow"
+                aria-describedby="building-bungalow-hint">
+              <label class="govuk-label govuk-radios__label" for="building-bungalow">
+                Bungalow
+              </label>
+              <div id="building-bungalow-hint" class="govuk-hint govuk-radios__hint">
+                1-storey house or cottage </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="building-maisonette" name="building-maisonette" type="radio" value="maisonette"
+                aria-describedby="building-maisonette-hint">
+              <label class="govuk-label govuk-radios__label" for="building-maisonette">
+                Maisonette
+              </label>
+              <div id="building-maisonette-hint" class="govuk-hint govuk-radios__hint">
+                2-story flat with your own front door</div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
