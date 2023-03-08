@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Home type - Section 106 – {{ serviceName }} – GOV.UK Prototype Kit
+Home type - Wheelchair standards – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,35 +21,29 @@ Home type - Section 106 – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/home-type-home-info" method="post" novalidate>
+        <form action="/home-type-accessibility-standards" method="post" novalidate>
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
+            <fieldset class="govuk-fieldset" aria-describedby="wheelchair-standards-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
                 <h1 class="govuk-fieldset__heading">
-                  Are these homes part of a section 106 agreement?
+                  Do the homes meet wheelchair standards?
                 </h1>
               </legend>
-              <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    What is a section 106 agreement?
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  Section 106 are agreements between a local planning authority and a property owner. They reduce the impact of development on the local community and are also known as ‘planning obligations’.
-                </div>
-              </details>
+              <div id="wheelchair-standards-hint" class="govuk-hint">
+                Select ‘yes’ if the homes meet the standards.
+              </div>
+
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="106-yes" name="106-yes" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="106-yes">
+                  <input class="govuk-radios__input" id="wheelchair-standards-yes" name="wheelchair-standards-yes" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="wheelchair-standards-yes">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="106-no" name="106-no" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="106-no">
+                  <input class="govuk-radios__input" id="wheelchair-standards-no" name="wheelchair-standards-no" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="wheelchair-standards-no">
                     No
                   </label>
                 </div>

@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home type - Particular group – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/home-type-building" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="needs-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
+            <h1 class="govuk-fieldset__heading">
+              Which group are these homes designed to meet the needs of?
+            </h1>
+          </legend>
+          <div id="needs-hint" class="govuk-hint">
+            Select one group.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-ethnic-minority-background"
+                name="group-ethnic-minority-background" type="radio" value="people from ethnic minority backgrounds"
+                aria-describedby="group-ethnic-minority-background-hint">
+              <label class="govuk-label govuk-radios__label" for="group-ethnic-minority-background">
+                People from ethnic minority backgrounds
+              </label>
+              <div id="group-ethnic-minority-background-hint" class="govuk-hint govuk-radios__hint">
+                Hint text </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-disabled-people" name="group-disabled-people" type="radio"
+                value="disabled people"
+                aria-describedby="group-disabled-people-hint">
+              <label class="govuk-label govuk-radios__label" for="group-disabled-people">
+                Disabled people
+              </label>
+              <div id="group-disabled-people-hint" class="govuk-hint govuk-radios__hint">
+                Hint text </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-faith" name="group-faith" type="radio"
+                value="faith groups"
+                aria-describedby="group-faith-hint">
+              <label class="govuk-label govuk-radios__label" for="group-faith">
+                Faith groups
+              </label>
+              <div id="group-faith-hint" class="govuk-hint govuk-radios__hint">
+                Hint text </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-domestic-violence" name="group-domestic-violence" type="radio"
+                value="people at risk of domestic violence"
+                aria-describedby="group-domestic-violence-hint">
+              <label class="govuk-label govuk-radios__label" for="group-domestic-violence">
+                People at risk of domestic violence
+              </label>
+              <div id="group-domestic-violence-hint" class="govuk-hint govuk-radios__hint">
+                Hint text </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-young-people" name="group-young-people" type="radio"
+                value="young people"
+                aria-describedby="group-young-people-hint">
+              <label class="govuk-label govuk-radios__label" for="group-young-people">
+                Young people
+              </label>
+              <div id="group-young-people-hint" class="govuk-hint govuk-radios__hint">
+                People under the age of ?</div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="group-older-people" name="group-older-people" type="radio"
+                value="older people"
+                aria-describedby="group-older-people-hint">
+              <label class="govuk-label govuk-radios__label" for="group-older-people">
+                Young people
+              </label>
+              <div id="group-older-people-hint" class="govuk-hint govuk-radios__hint">
+                People under the age of ?</div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return to scheme
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}
