@@ -57,8 +57,8 @@ Home type - building information – {{ serviceName }} – GOV.UK Prototype Kit
                 Single unit within a shared property </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-bungalow" name="building-bungalow" type="radio" value="bungalow"
-                aria-describedby="building-bungalow-hint">
+              <input class="govuk-radios__input" id="building-bungalow" name="building-bungalow" type="radio"
+                value="bungalow" aria-describedby="building-bungalow-hint">
               <label class="govuk-label govuk-radios__label" for="building-bungalow">
                 Bungalow
               </label>
@@ -66,8 +66,8 @@ Home type - building information – {{ serviceName }} – GOV.UK Prototype Kit
                 1-storey house or cottage </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-maisonette" name="building-maisonette" type="radio" value="maisonette"
-                aria-describedby="building-maisonette-hint">
+              <input class="govuk-radios__input" id="building-maisonette" name="building-maisonette" type="radio"
+                value="maisonette" aria-describedby="building-maisonette-hint">
               <label class="govuk-label govuk-radios__label" for="building-maisonette">
                 Maisonette
               </label>
@@ -77,6 +77,89 @@ Home type - building information – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </fieldset>
       </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="shared-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Do the homes have shared facilities?
+          </legend>
+          <div id="shared-hint" class="govuk-hint">
+            Select what kind of facilities the homes will have.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="shared" name="shared" type="radio" value="shared facilities">
+              <label class="govuk-label govuk-radios__label" for="shared">
+                Shared facilities
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="self-contained" name="self-contained" type="radio"
+                value="self-contained facilities">
+              <label class="govuk-label govuk-radios__label" for="building-flat">
+                Self-contained facilities
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="mix-facilities" name="mix-facilities" type="radio" value="mix of self-contained and shared facilities">
+              <label class="govuk-label govuk-radios__label" for="building-bedsit">
+                Mix of self-contained and shared facilities
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="new-reconstruction-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are the homes new builds or reconstructions?
+          </legend>
+          <div id="new-reconstruction-hint" class="govuk-hint">
+            Select how the homes will be built.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="new-build" name="new-build" type="radio" value="new build">
+              <label class="govuk-label govuk-radios__label" for="new-build">
+                New build
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reconstructions" name="reconstructions" type="radio" value="reconstructions">
+              <label class="govuk-label govuk-radios__label" for="reconstructions">
+                Reconstructions
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="tenant-input-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have tenants had any input on design?
+          </legend>
+          <div id="tenant-input-hint" class="govuk-hint">
+            Select ‘yes’ if tenants have inputted into the design.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="tenant-input-yes" name="tenant-input-yes" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="tenant-input-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="tenant-input-no" name="tenant-input-no" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="tenant-input-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>  
+
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
           Save and continue
