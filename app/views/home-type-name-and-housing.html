@@ -34,33 +34,36 @@ Home type - name and housing – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input class="govuk-input govuk-input--width-20" id="home-type-name" name="home-type-name" type="text" aria-describedby="home-type-name-hint" value="{{ data['home-type-name'] }}"  >
           </div>
+
+
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
+            <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Type of housing
+                Where do you live?
               </legend>
-              <div id="housing-type-hint" class="govuk-hint">
-                Select one option.
-              </div>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="{{ data['type-general'] }}">
-                  <label class="govuk-label govuk-radios__label" for="type-general">
+                  <input class="govuk-radios__input" id="type-of-housing1" name="type-of-housing" type="radio" value="General"  >
+                  <label class="govuk-label govuk-radios__label" for="type-of-housing1">
                     General
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio" value="{{ data['type-older-people'] }}">
-                  <label class="govuk-label govuk-radios__label" for="type-older-people">
+                  <input class="govuk-radios__input" id="type-of-housing-2" name="type-of-housing" type="radio" value="Housing for older people" >
+                  <label class="govuk-label govuk-radios__label" for="type-of-housing-2">
                     Housing for older people
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-disabled-and-vulnerable" name="type-disabled-and-vulnerable" type="radio" value=value="{{ data['type-disabled-and-vulnerable'] }}">
-                  <label class="govuk-label govuk-radios__label" for="type-disabled-and-vulnerable">
+                  <input class="govuk-radios__input" id="type-of-housing-3" name="type-of-housing" type="radio" value="Housing for disabled and vulnerable people" >
+                  <label class="govuk-label govuk-radios__label" for="type-of-housing-3">
                     Housing for disabled and vulnerable people
                   </label>
                 </div>
+              </div>
+            </fieldset>
+          </div>
+
 
               </div>
             </fieldset>
