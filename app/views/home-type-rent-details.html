@@ -1,0 +1,198 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home type - Rent details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
+    <h1 class="govuk-heading-l">Rent details</h1>
+    <form action="/home-type-home-information-conditional" method="post" novalidate>
+     
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="rent-terms-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            What are the rent terms?
+          </legend>
+          <div id="rent-terms-hint" class="govuk-hint">
+            Select the rent term for the homes.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="term-shared-ownership" name="term-shared-ownership" type="radio"
+                value="shared ownership"
+                aria-describedby="term-shared-ownership-hint">
+              <label class="govuk-label govuk-radios__label" for="term-shared-ownership">
+                Shared ownership
+              </label>
+              <div id="term-shared-ownership-hint" class="govuk-hint govuk-radios__hint">
+                Shared ownership is when people buy a share of their home and pay rent on the remaining share. </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="term-affordable" name="term-affordable" type="radio"
+                value="affordable rent"
+                aria-describedby="term-affordable-hint">
+              <label class="govuk-label govuk-radios__label" for="term-affordable">
+                Affordable rent
+              </label>
+              <div id="term-affordable-hint" class="govuk-hint govuk-radios__hint">
+                Affordable rent costs 80% of market rent (including service charges). </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="term-social" name="term-social" type="radio"
+                value="social rent"
+                aria-describedby="term-social-hint">
+              <label class="govuk-label govuk-radios__label" for="term-social">
+                Social rent
+              </label>
+              <div id="term-social-hint" class="govuk-hint govuk-radios__hint">
+                Social rent is usually low-cost rent that is paid to registered providers and local authorities. </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+     
+     
+     
+     
+     
+     
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="service-charge-week">
+          What is the service charge for each property per week?
+        </label>
+        <div id="service-charge-week-hint" class="govuk-hint">
+          Enter the service charge.
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-5" id="service-charge-amount-per-week" name="service-charge-amount-per-week" type="text" spellcheck="false" value="{{ data['service-charge-amount-per-week'] }}">
+          <div class="govuk-input__suffix" aria-hidden="true">per week</div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="market-value">
+          What is the market value of each property?
+        </label>
+        <div id="market-value-hint" class="govuk-hint">
+          Enter the market value for each property.
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-5" id="market-value-amount" name="market-value-amount" type="text" spellcheck="false" value="{{ data['market-value-amount'] }}">
+        </div>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="market-rent-week">
+          What is the market rent amount per week?
+        </label>
+        <div id="market-rent-week-hint" class="govuk-hint">
+          Enter the market rent amount per week.
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-5" id="market-rent-amount-week" name="market-rent-amount-week" type="text" spellcheck="false" value="{{ data['market-rent-amount-week'] }}">
+          <div class="govuk-input__suffix" aria-hidden="true">per week</div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="prospective-rent-week">
+          What is the prospective rent per week?
+        </label>
+        <div id="prospective-rent-week-hint" class="govuk-hint">
+          Enter the prospective rent, inclusive of all charges,
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-5" id="prospective-rent-amount-week" name="prospective-rent-amount-week" type="text" spellcheck="false" value="{{ data['prospective-rent-amount-week'] }}">
+          <div class="govuk-input__suffix" aria-hidden="true">per week</div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="prospective-rent-percentage-calc">
+          Prospective rent as percent of market rent
+        </label>
+        <div id="prospective-rent-percentage-calc-hint" class="govuk-hint">
+          This is inclusive of all charges        </div>
+        <p>77.27% <em>[calculated on page]</em></p>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" >
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Is the rent set at the local housing allowance level?
+          </legend>
+          
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What is the local housing allowance level?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Local housing allowance is used to work out how much housing benefit tenants can get if they rent privately.
+
+              <a href="#">Check the LHA rates for your property</a>, which is based on the area you live in.
+            </div>
+          </details>
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="local-housing-allowance-yes" name="local-housing-allowance--yes" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="local-housing-allowance-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="local-housing-allowance-no" name="local-housing-allowance-no" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="local-housing-allowance-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>  
+
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return to scheme
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
