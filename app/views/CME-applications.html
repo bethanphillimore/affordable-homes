@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8
+  ">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      Manage your continuous market engagement (CME) applications
+    </h1>
+    <p class="govuk-body-l">Create and manage applications for affordable housing grants through continuous market
+      engagement.
+    </p>
+
+
+
+
+  </div>
+
+  <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a href="check-provider.html">Create a new application
+      </a>
+    </h3>
+    <p class="govuk-body">Create a new application for an affordable housing grant through continuous market engagement.
+
+    </p>
+  </section>
+  <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a href="">Manage your applications
+      </a>
+    </h3>
+    <p class="govuk-body">View and edit your existing applications for an affordable housing grant through continuous
+      market engagement.
+    </p>
+  </section>
+
+</div>
+
+
+
+{% endblock %}
