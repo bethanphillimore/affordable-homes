@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Do you have planning permission for your site?
+
+          </h1>
+        </legend>
+        <div id="sign-in-hint" class="govuk-hint govuk-!-margin-bottom-8">
+          If you have planning permission for parts of the site but not the whole site, select ‘No’ and you can add it
+          in
+          the scheme information section.
+
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
+              aria-describedby="sign-in-item-hint">
+            <label class="govuk-label govuk-radios__label" for="sign-in">
+              Yes, I have full or outline planning permission for the whole site. </label>
+
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify"
+              aria-describedby="sign-in-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="sign-in-2">
+              No, I don’t have planning permission for the whole site. </label>
+
+          </div>
+
+        </div>
+      </fieldset>
+
+      <a href="planning-and-application-ref.html" class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">
+        Save and continue
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
