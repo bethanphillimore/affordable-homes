@@ -33,12 +33,12 @@ Home type - Floor area – {{ serviceName }} – GOV.UK Prototype Kit
         Read the nationally described space standards for information about recommended areas. </div>
     </details>
 
-    <form action="/home-type-home-information-conditional" method="post" novalidate>
+    <form action="/home-type-rent-details" method="post" novalidate>
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="internal-floor">
           How many square metres is the internal floor area in each home?
         </label>
-        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="internal-floor" name="internal-floor" type="text" spellcheck="false">
+        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="internal-floor" name="internal-floor" type="text" spellcheck="false" value="{{ data['internal-floor'] }}">
           <div class="govuk-input__suffix" aria-hidden="true">square metres</div>
         </div>
       </div>

@@ -32,7 +32,7 @@ Home type - name and housing – {{ serviceName }} – GOV.UK Prototype Kit
             <div id="home-type-name-hint" class="govuk-hint">
               For example, 1 bedroom flat.
             </div>
-            <input class="govuk-input govuk-input--width-20" id="home-type-name" name="home-type-name" type="text" aria-describedby="home-type-name-hint">
+            <input class="govuk-input govuk-input--width-20" id="home-type-name" name="home-type-name" type="text" aria-describedby="home-type-name-hint" value="{{ data['home-type-name'] }}"  >
           </div>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" role="group" aria-describedby="housing-type-hint">
@@ -44,19 +44,19 @@ Home type - name and housing – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="general">
+                  <input class="govuk-radios__input" id="type-general" name="type-general" type="radio" value="{{ data['type-general'] }}">
                   <label class="govuk-label govuk-radios__label" for="type-general">
                     General
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio" value="housing for older people">
+                  <input class="govuk-radios__input" id="type-older-people" name="type-older-people" type="radio" value="{{ data['type-older-people'] }}">
                   <label class="govuk-label govuk-radios__label" for="type-older-people">
                     Housing for older people
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="type-disabled-and-vulnerable" name="type-disabled-and-vulnerable" type="radio" value="housing for disabled and vulnerable people">
+                  <input class="govuk-radios__input" id="type-disabled-and-vulnerable" name="type-disabled-and-vulnerable" type="radio" value=value="{{ data['type-disabled-and-vulnerable'] }}">
                   <label class="govuk-label govuk-radios__label" for="type-disabled-and-vulnerable">
                     Housing for disabled and vulnerable people
                   </label>
@@ -65,14 +65,14 @@ Home type - name and housing – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </fieldset>
           </div>
-          <div class="govuk-button-group">
-            <button class="govuk-button" data-module="govuk-button">
-              Save and continue
-            </button>
-            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Save and return to scheme
-            </button>
-          </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return to scheme
+        </button>
+      </div>
         </form>
       </div>
     </div>

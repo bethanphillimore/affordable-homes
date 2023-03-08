@@ -1,0 +1,477 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+    <h2 class="govuk-heading-m">Home type details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Home type name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['home-type-name'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-name-and-housing">
+            Change
+            <span class="govuk-visually-hidden"> home type name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Type of housing
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ANSWER
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-name-and-housing">
+            Change
+            <span class="govuk-visually-hidden"> type of housing</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Section 106</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Homes part of a section 106 agreement
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-106">
+            Change
+            <span class="govuk-visually-hidden"> home part of a section 106 agreement</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <h2 class="govuk-heading-m">Home information</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of homes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['home-number'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> number of homes</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of bedrooms per home
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['bedroom-number'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> number of bedrooms per home</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Maximum number of people per home
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['max-people'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> maximum number of people per home</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of storeys per home
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['storeys-number'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> number of storeys per home</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Homes intended as move-on accommodation?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Move on
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> homes intended as move-on accommodation</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reconstructing existing residential homes?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Reconstruction
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> recontructing existing residential homes</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Homes designed to meet the needs of a particular group?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> homes designed to meet the needs of a particular group</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Particular group
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Particular group
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-information-conditional">
+            Change
+            <span class="govuk-visually-hidden"> particular group</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Building information</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Building type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Flat/bedsit/house etc
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-building">
+            Change
+            <span class="govuk-visually-hidden"> building type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do the homes have shared facilities?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-building">
+            Change
+            <span class="govuk-visually-hidden"> do the homes have shared facilities</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          New builds or reconstructions?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          New build/reconstructions
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-building">
+            Change
+            <span class="govuk-visually-hidden"> new builds or reconstructions</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have tenants inputted on design?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-home-info">
+            Change
+            <span class="govuk-visually-hidden"> have tenants inputted on design</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Accessibility</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Homes meet wheelchair standards?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-accessibility-standards">
+            Change
+            <span class="govuk-visually-hidden"> homes meet wheelchair standards</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Accessibility category
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Category 1, 2a, 2b or 3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-accessibility-standards">
+            Change
+            <span class="govuk-visually-hidden"> accessibility category</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Floor area</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Internal floor area per home
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['internal-floor'] }} square metres
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-floor-area">
+            Change
+            <span class="govuk-visually-hidden"> number of homes</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nationally described space standards met by homes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Storage, bedroom areas, bedroom widths or none
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-floor-area">
+            Change
+            <span class="govuk-visually-hidden"> maximum number of people per home</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Rent details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Rent terms
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ANSWER
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> rent terms</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Service charge for each property per week
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['service-charge-amount-per-week'] }} per week
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> number of homes</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Market value of each property
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['market-value-amount'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> market value of each property</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Market rent per week
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['market-rent-amount-week'] }} per week
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> market rent per week</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Prospective rent per week (inclusive of all charges)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['prospective-rent-amount-week'] }} per week
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> prospective rent per week (inclusive of all charges)</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Prospective rent as a percentage of market rent (inclusive of all charges)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          77.27%
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Prospective rent (plus service charges) more than 80% of the market rent?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> prospective rent (plus service charges) more than 80% of the market rent?</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Rent set at the local housing allowance level?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes/no
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/home-type-rent-details">
+            Change
+            <span class="govuk-visually-hidden"> rent set at the local housing allowance level?</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return to scheme
+        </button>
+      </div>
+
+
+
+  </div>
+</div>
+{% endblock %}
