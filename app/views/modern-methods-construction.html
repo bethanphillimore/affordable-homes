@@ -23,65 +23,65 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form action="/create-site-check-answers" method="post" novalidate>
 
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
+              Are you using Modern Methods of Construction (MMC)?
+            </h1>
+          </legend>
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
-            Are you using Modern Methods of Construction (MMC)?
-          </h1>
-        </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes-all" name="m-m-c" type="radio"
+                value=" Yes, I’m using MMC for all the housing on this site." aria-describedby="yes-all-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+                Yes, I’m using MMC for all the housing on this site.</label>
 
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
-              aria-describedby="sign-in-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in">
-              Yes, I’m using MMC for all the housing on this site.</label>
-
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
-              aria-describedby="sign-in-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in">
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes-some" name="m-m-c" type="radio"
+                value="Yes, but only for some of the housing on a site." aria-describedby="yes-some-hint>
+              <label class=" govuk-label govuk-radios__label" for="sign-in">
               Yes, but only for some of the housing on a site.</label>
-            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-              If you are using MMC for some housing on this site, you can provide details in the home type section.
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                If you are using MMC for some housing on this site, you can provide details in the home type section.
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-none" name="m-m-c" type="radio"
+                value="No, I’m not using any MMC on this site." aria-describedby="no-none-hint">
+              <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="sign-in-2">
+                No, I’m not using any MMC on this site. </label>
+
             </div>
 
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify"
-              aria-describedby="sign-in-2-item-hint">
-            <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="sign-in-2">
-              No, I’m not using any MMC on this site. </label>
 
-          </div>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What are Modern Methods of Construction?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Modern methods of construction use off-site construction rather than traditional building techniques.
+              <br><br>
+              You can read about the <a href="">different types of MMC </a>for more information.
+            </div>
+          </details>
+        </fieldset>
 
-        </div>
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              What are Modern Methods of Construction?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            Modern methods of construction use off-site construction rather than traditional building techniques.
-            <br><br>
-            You can read about the <a href="">different types of MMC </a>for more information.
-          </div>
-        </details>
-      </fieldset>
-
-      <a href="" class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">
-        Save and continue
-      </a>
-    </div>
+        <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+          Save and continue
+        </button>
+      </div>
 
 
-
+    </form>
   </div>
 </div>
 

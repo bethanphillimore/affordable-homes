@@ -35,38 +35,50 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-    <form class="form" action="/url/of/next/page" method="post">
-
+    <form action="/add-location" method="post" novalidate>
       <div class="govuk-form-group  govuk-!-margin-bottom-6 govuk-!-margin-top-8">
-        <fieldset class="govuk-fieldset">
 
-          <input class="govuk-input" id="site-name" name="site-name" type="text" aria-describedby="site-name-hint">
+        <input class="govuk-input" id="site-name" name="site-name" type="text" aria-describedby="site-name-hint"
+          value="{{ data['site-name'] }}">
+
+      </div>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is a site?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          A site can contain one or more schemes that are in the same location. You can add schemes to your sites to
+          request grant funding for different types of affordable housing.
+          <br><br>You will need to provide the location, planning permission and evidence of local housing need for the
+          site.
+        </div>
+      </details>
 
 
-        </fieldset>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
       </div>
 
 
 
     </form>
 
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          What is a site?
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        A site can contain one or more schemes that are in the same location. You can add schemes to your sites to
-        request grant funding for different types of affordable housing.
-        <br><br>You will need to provide the location, planning permission and evidence of local housing need for the
-        site.
-      </div>
-    </details>
-    <a href="add-location.html" class="govuk-button " data-module="govuk-button">
-      Save and continue
-    </a>
+
   </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
