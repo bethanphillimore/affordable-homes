@@ -1,0 +1,204 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          {{ data['site-name'] }} site created.
+        </h3>
+
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">{{ data['site-name'] }}</h1>
+    <p class="govuk-body-l ">View and add your schemes and submit them for review. The schemes you
+      add will sit within
+      this site.</p>
+
+
+  </div>
+
+
+
+  <div class="govuk-grid-column-full">
+
+    <a href="scheme-name-tenure.html" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-6"
+      data-module="govuk-button">
+      Create a new scheme
+
+
+    </a>
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#schemes">
+            Schemes
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#site-details">
+            Site details
+          </a>
+        </li>
+
+      </ul>
+      <div class="govuk-tabs__panel" id="schemes">
+        <div id="more-detail-hint" class="govuk-hint">
+          Your schemes on the Breach avenue site will appear here. </div>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="site-details">
+
+        <h2 class="govuk-heading-m">Site details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['site-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="name-of-the-site.html">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Location
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Example location
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="add-location.html">
+                Change
+                <span class="govuk-visually-hidden">location</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Planning permission
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p> {{ data['planning-permission'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="planning-permission.html">
+                Change
+                <span class="govuk-visually-hidden"> planning permission</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of planning </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['type-of-planning'] }}
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="planning-and-application-ref.html">
+                Change
+                <span class="govuk-visually-hidden"> types of planning</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site planning application reference
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['planning-application-reference'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="planning-and-application-ref.html">
+                Change
+                <span class="govuk-visually-hidden"> planning application number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Local housing need </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['local-housing-need'] }}
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="local-housing-need.html">
+                Change
+                <span class="govuk-visually-hidden"> Local housing need</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Evidence of local authority support </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">EvidenceReport.JPG</a>
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="local-housing-need.html">
+                Change
+                <span class="govuk-visually-hidden"> Local housing need</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Modern Methods of Construction (MMC)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['m-m-c'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="modern-methods-construction.html">
+                Change
+                <span class="govuk-visually-hidden"> Modern Methods of Construction (MMC)</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

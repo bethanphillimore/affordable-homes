@@ -65,7 +65,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Homes part of a section 106 agreement
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes/no
+          {{ data['106'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-106">
@@ -435,7 +435,8 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-rent-details">
             Change
-            <span class="govuk-visually-hidden"> prospective rent (plus service charges) more than 80% of the market rent?</span>
+            <span class="govuk-visually-hidden"> prospective rent (plus service charges) more than 80% of the market
+              rent?</span>
           </a>
         </dd>
       </div>
@@ -461,14 +462,15 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Save and continue
-        </button>
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Save and return to scheme
-        </button>
-      </div>
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+      <a href="" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+        Save and return to scheme
+      </a>
+
+    </div>
 
 
 
