@@ -22,8 +22,10 @@ Home type - Particular group – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="/home-type-building" method="post" novalidate>
+
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="needs-hint">
+        <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
@@ -35,72 +37,61 @@ Home type - Particular group – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-ethnic-minority-background"
-                name="group-ethnic-minority-background" type="radio" value="people from ethnic minority backgrounds"
-                aria-describedby="group-ethnic-minority-background-hint">
-              <label class="govuk-label govuk-radios__label" for="group-ethnic-minority-background">
+              <input class="govuk-radios__input" id="particular-group-type-1" name="particular-group-type" type="radio" value="People from ethnic minority backgrounds" {{"checked" if data["particular-group-type"] == "People from ethnic minority backgrounds" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-1">
                 People from ethnic minority backgrounds
               </label>
-              <div id="group-ethnic-minority-background-hint" class="govuk-hint govuk-radios__hint">
+              <div id="particular-group-type-1-hint" class="govuk-hint govuk-radios__hint">
                 Hint text </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-disabled-people" name="group-disabled-people" type="radio"
-                value="disabled people"
-                aria-describedby="group-disabled-people-hint">
-              <label class="govuk-label govuk-radios__label" for="group-disabled-people">
+              <input class="govuk-radios__input" id="particular-group-type-2" name="particular-group-type" type="radio" value="Disabled people" {{"checked" if data["particular-group-type"] == "Disabled people" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-2">
                 Disabled people
               </label>
-              <div id="group-disabled-people-hint" class="govuk-hint govuk-radios__hint">
+              <div id="particular-group-type-2-hint" class="govuk-hint govuk-radios__hint">
                 Hint text </div>
             </div>
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-faith" name="group-faith" type="radio"
-                value="faith groups"
-                aria-describedby="group-faith-hint">
-              <label class="govuk-label govuk-radios__label" for="group-faith">
+              <input class="govuk-radios__input" id="particular-group-type-3" name="particular-group-type" type="radio" value="Faith groups" {{"checked" if data["particular-group-type"] == "Faith groups" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-3">
                 Faith groups
               </label>
-              <div id="group-faith-hint" class="govuk-hint govuk-radios__hint">
+              <div id="particular-group-type-3-hint" class="govuk-hint govuk-radios__hint">
                 Hint text </div>
             </div>
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-domestic-violence" name="group-domestic-violence" type="radio"
-                value="people at risk of domestic violence"
-                aria-describedby="group-domestic-violence-hint">
-              <label class="govuk-label govuk-radios__label" for="group-domestic-violence">
+              <input class="govuk-radios__input" id="particular-group-type-4" name="particular-group-type" type="radio" value="People at risk of domestic violence" {{"checked" if data["particular-group-type"] == "People at risk of domestic violence" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-4">
                 People at risk of domestic violence
               </label>
-              <div id="group-domestic-violence-hint" class="govuk-hint govuk-radios__hint">
+              <div id="particular-group-type-4-hint" class="govuk-hint govuk-radios__hint">
                 Hint text </div>
             </div>
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-young-people" name="group-young-people" type="radio"
-                value="young people"
-                aria-describedby="group-young-people-hint">
-              <label class="govuk-label govuk-radios__label" for="group-young-people">
+              <input class="govuk-radios__input" id="particular-group-type-5" name="particular-group-type" type="radio" value="Young people" {{"checked" if data["particular-group-type"] == "Young people" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-5">
                 Young people
               </label>
-              <div id="group-young-people-hint" class="govuk-hint govuk-radios__hint">
-                People under the age of ?</div>
+              <div id="particular-group-type-5-hint" class="govuk-hint govuk-radios__hint">
+                People under the age of? </div>
             </div>
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="group-older-people" name="group-older-people" type="radio"
-                value="older people"
-                aria-describedby="group-older-people-hint">
-              <label class="govuk-label govuk-radios__label" for="group-older-people">
-                Young people
+              <input class="govuk-radios__input" id="particular-group-type-6" name="particular-group-type" type="radio" value="Older people" {{"checked" if data["particular-group-type"] == "Older people" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-type-6">
+                Older people
               </label>
-              <div id="group-older-people-hint" class="govuk-hint govuk-radios__hint">
-                People under the age of ?</div>
+              <div id="particular-group-type-6-hint" class="govuk-hint govuk-radios__hint">
+                People over the age of </div>
             </div>
+           
           </div>
         </fieldset>
       </div>
+
+     
+
+
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
           Save and continue

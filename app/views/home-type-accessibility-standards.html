@@ -22,64 +22,66 @@ Home type - Accessibility standards – {{ serviceName }} – GOV.UK Prototype K
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="/home-type-floor-area" method="post" novalidate>
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="needs-hint">
+        <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
-              What accessibility category do they meet? 
+              What accessibility category do they meet?
             </h1>
           </legend>
-          <div id="needs-hint" class="govuk-hint">
+          <div id="access-category-hint" class="govuk-hint">
             Select one group.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="access-category-1"
-                name="access-category-1" type="radio" value="category 1: visitable dwellings"
-                aria-describedby="access-category-1-hint">
+              <input class="govuk-radios__input" id="access-category-1" name="access-category" type="radio"
+                value="Category 1: visitable dwellings" {{"checked" if data["access-category"] == "Category 1: visitable dwellings" }}>
               <label class="govuk-label govuk-radios__label" for="access-category-1">
                 Category 1: visitable dwellings
               </label>
               <div id="access-category-1-hint" class="govuk-hint govuk-radios__hint">
                 When reasonable provision is made for people to access and use the dwelling and its facilities. </div>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="access-category-2a" name="access-category-2a" type="radio"
-                value="category 2: accessibility dwellings"
-                aria-describedby="access-category-2a-hint">
+              <input class="govuk-radios__input" id="access-category-2a" name="access-category" type="radio" value="Category 2: accessible dwellings"
+                {{"checked" if data["access-category"] == "Category 2: accessible dwellings" }}>
               <label class="govuk-label govuk-radios__label" for="access-category-2a">
                 Category 2: accessible dwellings
               </label>
-              <div id="group-disabled-people-hint" class="govuk-hint govuk-radios__hint">
-                When reasonable provision is made for people to access and use the dwelling and its facilities. This must meet the needs of occupants with differing needs and allow adaptations to meet the changing needs of occupants over time.</div>
+              <div id="access-category-2a-hint" class="govuk-hint govuk-radios__hint">
+                When reasonable provision is made for people to access and use the dwelling and its facilities. </div>
             </div>
 
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="access-category-2b" name="access-category-2b" type="radio"
-                value="category 2: adaptable dwellings"
-                aria-describedby="access-category-2b-hint">
+              <input class="govuk-radios__input" id="access-category-2b" name="access-category" type="radio" value="Category 2: adaptable dwellings"
+                {{"checked" if data["access-category"] == "Category 2: adaptable dwellings" }}>
               <label class="govuk-label govuk-radios__label" for="access-category-2b">
                 Category 2: adaptable dwellings
               </label>
-              <div id="group-faith-hint" class="govuk-hint govuk-radios__hint">
-                When reasonable provision is made for people to access and use the dwelling and its facilities. This must meet the needs of occupants with differing needs and allow adaptations to meet the changing needs of occupants over time. </div>
+              <div id="access-category-2b-hint" class="govuk-hint govuk-radios__hint">
+                When reasonable provision is made for people to access and use the dwelling and its facilities. </div>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="access-category-3" name="access-category-3" type="radio"
-                value="category 3: wheelchair user dwellings"
-                aria-describedby="access-category-3-hint">
+              <input class="govuk-radios__input" id="access-category-3" name="access-category" type="radio" value="Category 3: wheelchair user dwellings"
+                {{"checked" if data["access-category"] == "Category 3: wheelchair user dwellings" }}>
               <label class="govuk-label govuk-radios__label" for="access-category-3">
                 Category 3: wheelchair user dwellings
               </label>
               <div id="access-category-3-hint" class="govuk-hint govuk-radios__hint">
-                When reasonable provision is made for people to access and use the dwelling and its facilities. This must allow simple adaptation of the dwelling to meet the needs of occupants who use wheelchairs or meet the needs of occupants who use wheelchairs. </div>
+                When reasonable provision is made for people to access and use the dwelling and its facilities. </div>
             </div>
+
 
           </div>
         </fieldset>
       </div>
+
+
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
           Save and continue

@@ -143,7 +143,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Homes intended as move-on accommodation?
         </dt>
         <dd class="govuk-summary-list__value">
-          Move on
+          {{ data['move-on'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-home-info">
@@ -158,7 +158,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Reconstructing existing residential homes?
         </dt>
         <dd class="govuk-summary-list__value">
-          Reconstruction
+          {{ data['reconstruct'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-home-info">
@@ -174,7 +174,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Homes designed to meet the needs of a particular group?
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes
+          {{ data['particular-group'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-home-info">
@@ -190,7 +190,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Particular group
         </dt>
         <dd class="govuk-summary-list__value">
-          Particular group
+          {{ data['particular-group-type'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-home-information-conditional">
@@ -210,7 +210,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Building type
         </dt>
         <dd class="govuk-summary-list__value">
-          Flat/bedsit/house etc
+          {{ data['building-type'] }} 
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-building">
@@ -224,7 +224,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Do the homes have shared facilities?
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes/no
+          {{ data['facilities'] }} 
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-building">
@@ -238,7 +238,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           New builds or reconstructions?
         </dt>
         <dd class="govuk-summary-list__value">
-          New build/reconstructions
+          {{ data['new-reconstruction'] }}  
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-building">
@@ -252,10 +252,10 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Have tenants inputted on design?
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes/no
+          {{ data['tenant-input'] }}  
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/home-type-home-info">
+          <a href="/home-type-building">
             Change
             <span class="govuk-visually-hidden"> have tenants inputted on design</span>
           </a>
@@ -272,10 +272,10 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Homes meet wheelchair standards?
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes/no
+          {{ data['wheelchair-standards'] }}  
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a href="/home-type-accessibility-standards">
+          <a href="/home-type-wheelchair-standards">
             Change
             <span class="govuk-visually-hidden"> homes meet wheelchair standards</span>
           </a>
@@ -286,7 +286,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Accessibility category
         </dt>
         <dd class="govuk-summary-list__value">
-          Category 1, 2a, 2b or 3
+          {{ data['access-category'] }}  
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-accessibility-standards">
@@ -320,7 +320,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Nationally described space standards met by homes
         </dt>
         <dd class="govuk-summary-list__value">
-          Storage, bedroom areas, bedroom widths or none
+          {{ data['space-standards'] }} 
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-floor-area">
@@ -341,7 +341,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Rent terms
         </dt>
         <dd class="govuk-summary-list__value">
-          ANSWER
+          {{ data['rent-terms'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-rent-details">
@@ -448,7 +448,7 @@ Home type - check your answers – {{ serviceName }} – GOV.UK Prototype Kit
           Rent set at the local housing allowance level?
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes/no
+          {{ data['housing-allowance'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a href="/home-type-rent-details">

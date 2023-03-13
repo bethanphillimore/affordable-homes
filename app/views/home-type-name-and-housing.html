@@ -41,30 +41,27 @@ Home type - name and housing – {{ serviceName }} – GOV.UK Prototype Kit
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <label class="govuk-label govuk-label--m" for="type-of-housing">
             Type of housing
-          </legend>
-
+          </label>
+          <div id="type-of-housing-hint" class="govuk-hint">
+            Select one option
+          </div>
           <div class="govuk-radios" data-module="govuk-radios">
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-housing1" name="type-of-housing" type="radio"
-                value="General">
-              <label class="govuk-label govuk-radios__label" for="type-of-housing1">
+              <input class="govuk-radios__input" id="type-of-housing-1" name="type-of-housing" type="radio" value="General" {{"checked" if data["type-of-housing"] == "General" }}>
+              <label class="govuk-label govuk-radios__label" for="type-of-housing-1">
                 General
               </label>
             </div>
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-housing-2" name="type-of-housing" type="radio"
-                value="Housing for older people">
+              <input class="govuk-radios__input" id="type-of-housing-2" name="type-of-housing" type="radio" value="Housing for older people" {{"checked" if data["type-of-housing"] == "Housing for older people" }}>
               <label class="govuk-label govuk-radios__label" for="type-of-housing-2">
                 Housing for older people
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-housing-3" name="type-of-housing" type="radio"
-                value="Housing for disabled and vulnerable people">
+              <input class="govuk-radios__input" id="type-of-housing-3" name="type-of-housing" type="radio" value="Housing for disabled and vulnerable people" {{"checked" if data["type-of-housing"] == "Housing for disabled and vulnerable people" }}>
               <label class="govuk-label govuk-radios__label" for="type-of-housing-3">
                 Housing for disabled and vulnerable people
               </label>
