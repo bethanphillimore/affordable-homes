@@ -26,51 +26,43 @@ Home type - Rent details – {{ serviceName }} – GOV.UK Prototype Kit
     <form action="/home-type-check-answers" method="post" novalidate>
      
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="rent-terms-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="rent-terms">
             What are the rent terms?
-          </legend>
+          </label>
           <div id="rent-terms-hint" class="govuk-hint">
             Select the rent term for the homes.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="term-shared-ownership" name="term-shared-ownership" type="radio"
-                value="shared ownership"
-                aria-describedby="term-shared-ownership-hint">
-              <label class="govuk-label govuk-radios__label" for="term-shared-ownership">
+              <input class="govuk-radios__input" id="rent-terms-1" name="rent-terms" type="radio" value="Shared ownership" {{"checked" if data["rent-terms"] == "Shared ownership" }}>
+              <label class="govuk-label govuk-radios__label" for="rent-terms-1">
                 Shared ownership
               </label>
               <div id="term-shared-ownership-hint" class="govuk-hint govuk-radios__hint">
                 Shared ownership is when people buy a share of their home and pay rent on the remaining share. </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="term-affordable" name="term-affordable" type="radio"
-                value="affordable rent"
-                aria-describedby="term-affordable-hint">
-              <label class="govuk-label govuk-radios__label" for="term-affordable">
+              <input class="govuk-radios__input" id="rent-terms-2" name="rent-terms" type="radio" value="Affordable rent" {{"checked" if data["rent-terms"] == "Affordable rent" }}>
+              <label class="govuk-label govuk-radios__label" for="rent-terms-2">
                 Affordable rent
               </label>
-              <div id="term-affordable-hint" class="govuk-hint govuk-radios__hint">
-                Affordable rent costs 80% of market rent (including service charges). </div>
+              <div id="term-shared-ownership-hint" class="govuk-hint govuk-radios__hint">
+                Shared ownership is when people buy a share of their home and pay rent on the remaining share. </div>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="term-social" name="term-social" type="radio"
-                value="social rent"
-                aria-describedby="term-social-hint">
-              <label class="govuk-label govuk-radios__label" for="term-social">
+              <input class="govuk-radios__input" id="rent-terms-3" name="rent-terms" type="radio" value="Social rent" {{"checked" if data["rent-terms"] == "Social rent" }}>
+              <label class="govuk-label govuk-radios__label" for="rent-terms-3">
                 Social rent
               </label>
               <div id="term-social-hint" class="govuk-hint govuk-radios__hint">
                 Social rent is usually low-cost rent that is paid to registered providers and local authorities. </div>
             </div>
+
           </div>
         </fieldset>
       </div>
-     
-     
-     
      
      
      
@@ -140,12 +132,12 @@ Home type - Rent details – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
 
 
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" >
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="housing-allowance">
             Is the rent set at the local housing allowance level?
-          </legend>
-          
+          </label>
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -158,23 +150,25 @@ Home type - Rent details – {{ serviceName }} – GOV.UK Prototype Kit
               <a href="#">Check the LHA rates for your property</a>, which is based on the area you live in.
             </div>
           </details>
-
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="local-housing-allowance-yes" name="local-housing-allowance--yes" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="local-housing-allowance-yes">
+              <input class="govuk-radios__input" id="housing-allowance-yes" name="housing-allowance" type="radio" value="Yes" {{"checked" if data["housing-allowance"] == "Yes" }}>
+              <label class="govuk-label govuk-radios__label" for="housing-allowance-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="local-housing-allowance-no" name="local-housing-allowance-no" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="local-housing-allowance-no">
+              <input class="govuk-radios__input" id="housing-allowance-no" name="housing-allowance" type="radio" value="No" {{"checked" if data["housing-allowance"] == "No" }}>
+              <label class="govuk-label govuk-radios__label" for="housing-allowance-no">
                 No
               </label>
             </div>
           </div>
         </fieldset>
-      </div>  
+      </div>
+
+
+
 
 
 

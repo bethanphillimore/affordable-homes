@@ -31,19 +31,19 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
         <div id="home-number-hint" class="govuk-hint">
           Enter the number of homes. For example, 20.
         </div>
-        <input class="govuk-input govuk-input--width-4" id="home-number" name="home-number" type="text"
-          value="{{ data['home-number'] }}" aria-describedby="home-number-hint">
+        <input class="govuk-input govuk-input--width-4" id="home-number" name="home-number" type="text" value="{{ data['home-number'] }}"
+          aria-describedby="home-number-hint">
       </div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="bedroom-numberr">
+        <label class="govuk-label govuk-label--m" for="bedroom-number">
           How many bedrooms are there in each home?
         </label>
         <div id="bedroom-number-hint" class="govuk-hint">
           Enter the number of bedrooms. For example, 3.
         </div>
-        <input class="govuk-input govuk-input--width-4" id="bedroom-number" name="bedroom-number" type="text"
-          value="{{ data['bedroom-number'] }}" aria-describedby="bedroom-number-hint">
+        <input class="govuk-input govuk-input--width-4" id="bedroom-number" name="bedroom-number" type="text" value="{{ data['bedroom-number'] }}"
+          aria-describedby="bedroom-number-hint">
       </div>
 
       <div class="govuk-form-group">
@@ -51,10 +51,10 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
           What is the maximum number of people who will live in this home?
         </label>
         <div id="max-people-hint" class="govuk-hint">
-          Enter the maximum number of people. For example, 6.
+          Enter the maximum number of people.. For example, 6.
         </div>
-        <input class="govuk-input govuk-input--width-4" id="max-people" name="max-people" type="text"
-          value="{{ data['max-people'] }}" aria-describedby="max-people-hint">
+        <input class="govuk-input govuk-input--width-4" id="max-people" name="max-people" type="text" value="{{ data['max-people'] }}"
+          aria-describedby="max-people-hint">
       </div>
 
       <div class="govuk-form-group">
@@ -64,35 +64,33 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
         <div id="storeys-number-hint" class="govuk-hint">
           Enter the number of storeys. For example, 2.
         </div>
-        <input class="govuk-input govuk-input--width-4" id="storeys-number" name="storeys-number" type="text"
-          value="{{ data['storeys-number'] }}" aria-describedby="storeys-number-hint">
+        <input class="govuk-input govuk-input--width-4" id="storeys-number" name="storeys-number" type="text" value="{{ data['storeys-number'] }}"
+          aria-describedby="storeys-number-hint">
       </div>
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="move-on-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="move-on">
             Are these homes intended as move-on accommodation?
-          </legend>
+          </label>
           <div id="move-on-hint" class="govuk-hint">
             Move-on accommodation is temporary accommodation to help people living in hostels make the transition into
             independent living.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
-
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="move-on-yes" name="move-on-yes" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="type-general">
+              <input class="govuk-radios__input" id="move-on-yes" name="move-on" type="radio" value="Yes" {{"checked" if data["move-on"] == "Yes" }}>
+              <label class="govuk-label govuk-radios__label" for="move-on-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="move-on-no" name="move-on-no" type="radio" value="no">
+              <input class="govuk-radios__input" id="move-on-no" name="move-on" type="radio" value="No" {{"checked" if data["move-on"] == "No" }}>
               <label class="govuk-label govuk-radios__label" for="move-on-no">
                 No
               </label>
             </div>
-
           </div>
         </fieldset>
       </div>
@@ -100,59 +98,60 @@ Home type - Home information – {{ serviceName }} – GOV.UK Prototype Kit
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="reconstruct-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="reconstruct">
             Will you be reconstructing existing residential homes to increase number of homes?
-          </legend>
+          </label>
           <div id="reconstruct-hint" class="govuk-hint">
             Select ‘yes’ if you will reconstruct existing homes.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reconstruct-yes" name="reconstruct-yes" type="radio" value="yes">
+              <input class="govuk-radios__input" id="reconstruct-yes" name="reconstruct" type="radio" value="Yes" {{"checked" if data["reconstruct"] == "Yes" }}>
               <label class="govuk-label govuk-radios__label" for="reconstruct-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reconstruct-no" name="reconstruct-no" type="radio"
-                value="reconstruct-no">
+              <input class="govuk-radios__input" id="reconstruct-no" name="reconstruct" type="radio" value="No" {{"checked" if data["reconstruct"] == "No" }}>
               <label class="govuk-label govuk-radios__label" for="reconstruct-no">
                 No
               </label>
             </div>
-
           </div>
         </fieldset>
       </div>
 
-
-
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="needs-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="particular-group">
             Are these homes designed to meet the needs of a particular group?
-          </legend>
-          <div id="needs-hint" class="govuk-hint">
+          </label>
+          <div id="particular-group-hint" class="govuk-hint">
             Select ‘yes’ if the homes will be for a particular group of people.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="part-needs-yes" name="part-needs-yes" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="part-needs-yes">
+              <input class="govuk-radios__input" id="particular-group-yes" name="particular-group" type="radio" value="Yes" {{"checked" if data["particular-group"] == "Yes" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="part-needs-no" name="part-needs-no" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="part-needs-no">
+              <input class="govuk-radios__input" id="particular-group-no" name="particular-group" type="radio" value="No" {{"checked" if data["particular-group"] == "No" }}>
+              <label class="govuk-label govuk-radios__label" for="particular-group-no">
                 No
               </label>
             </div>
-
           </div>
         </fieldset>
       </div>
+
+
+
+
+
+ 
 
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">

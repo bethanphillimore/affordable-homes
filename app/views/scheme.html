@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Scheme 1: affordable rent – {{ serviceName }} – GOV.UK Prototype Kit
+{{ data['scheme-name'] }}: {{ data['scheme-tenure'] }} – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ Scheme 1: affordable rent – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      {{ data['scheme-name'] }}: affordable rent
+      {{ data['scheme-name'] }}: {{ data['scheme-tenure'] }}
     </h1>
 
     <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Scheme incomplete</h2>

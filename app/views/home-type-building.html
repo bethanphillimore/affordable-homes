@@ -24,141 +24,170 @@ Home type - building information – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Home type details: {{ data['scheme-name'] }}</span>
     <h1 class="govuk-heading-l">Building information</h1>
-    <form action="/home-type-floor-area" method="post" novalidate>
+    <form action="/home-type-wheelchair-standards" method="post" novalidate>
+
+
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="building-type-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="building-type">
             What is the building type?
-          </legend>
+          </label>
           <div id="building-type-hint" class="govuk-hint">
             Select one option.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-house" name="building-house" type="radio" value="house">
-              <label class="govuk-label govuk-radios__label" for="building-house">
+              <input class="govuk-radios__input" id="building-type-1" name="building-type" type="radio" value="House"
+                {{"checked" if data["building-type"] == "House" }}>
+              <label class="govuk-label govuk-radios__label" for="building-type-1">
                 House
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-flat" name="building-flat" type="radio" value="flat"
-                aria-describedby="building-flat-hint">
-              <label class="govuk-label govuk-radios__label" for="building-flat">
+              <input class="govuk-radios__input" id="building-type-2" name="building-type" type="radio" value="Flat"
+                {{"checked" if data["building-type"] == "Flat" }}>
+              <label class="govuk-label govuk-radios__label" for="building-type-2">
                 Flat
               </label>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-bedsit" name="building-bedsit" type="radio" value="bedsit"
-                aria-describedby="building-bedsit-hint">
-              <label class="govuk-label govuk-radios__label" for="building-bedsit">
+              <input class="govuk-radios__input" id="building-type-3" name="building-type" type="radio" value="Bedsit"
+                {{"checked" if data["building-type"] == "Bedsit" }}>
+              <label class="govuk-label govuk-radios__label" for="building-type-3">
                 Bedsit
               </label>
-              <div id="building-bedsit-hint" class="govuk-hint govuk-radios__hint">
+              <div id="building-type-3-hint" class="govuk-hint govuk-radios__hint">
                 Single unit within a shared property </div>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-bungalow" name="building-bungalow" type="radio"
-                value="bungalow" aria-describedby="building-bungalow-hint">
-              <label class="govuk-label govuk-radios__label" for="building-bungalow">
+              <input class="govuk-radios__input" id="building-type-4" name="building-type" type="radio" value="Bungalow"
+                {{"checked" if data["building-type"] == "Bungalow" }}>
+              <label class="govuk-label govuk-radios__label" for="building-type-4">
                 Bungalow
               </label>
-              <div id="building-bungalow-hint" class="govuk-hint govuk-radios__hint">
+              <div id="building-type-4-hint" class="govuk-hint govuk-radios__hint">
                 1-storey house or cottage </div>
             </div>
+
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="building-maisonette" name="building-maisonette" type="radio"
-                value="maisonette" aria-describedby="building-maisonette-hint">
-              <label class="govuk-label govuk-radios__label" for="building-maisonette">
+              <input class="govuk-radios__input" id="building-type-5" name="building-type" type="radio"
+                value="Maisonette" {{"checked" if data["building-type"] == "Maisonette" }}>
+              <label class="govuk-label govuk-radios__label" for="building-type-5">
                 Maisonette
               </label>
-              <div id="building-maisonette-hint" class="govuk-hint govuk-radios__hint">
-                2-story flat with your own front door</div>
+              <div id="building-type-5-hint" class="govuk-hint govuk-radios__hint">
+                2-story flat with your own front door </div>
+
             </div>
           </div>
         </fieldset>
       </div>
 
+
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="shared-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="facilities">
             Do the homes have shared facilities?
-          </legend>
-          <div id="shared-hint" class="govuk-hint">
+          </label>
+          <div id="facilities-hint" class="govuk-hint">
             Select what kind of facilities the homes will have.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="shared" name="shared" type="radio" value="shared facilities">
-              <label class="govuk-label govuk-radios__label" for="shared">
+              <input class="govuk-radios__input" id="facilities-1" name="facilities" type="radio" value="Shared facilities"
+                {{"checked" if data["facilities"] == "Shared facilities" }}>
+              <label class="govuk-label govuk-radios__label" for="facilities-1">
                 Shared facilities
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="self-contained" name="self-contained" type="radio"
-                value="self-contained facilities">
-              <label class="govuk-label govuk-radios__label" for="building-flat">
+              <input class="govuk-radios__input" id="facilities-2" name="facilities" type="radio" value="Self-contained facilities"
+                {{"checked" if data["facilities"] == "Self-contained facilities" }}>
+              <label class="govuk-label govuk-radios__label" for="facilities-2">
                 Self-contained facilities
               </label>
             </div>
+
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="mix-facilities" name="mix-facilities" type="radio" value="mix of self-contained and shared facilities">
-              <label class="govuk-label govuk-radios__label" for="building-bedsit">
+              <input class="govuk-radios__input" id="facilities-3" name="facilities" type="radio" value="Mix of self-contained and shared facilities"
+                {{"checked" if data["facilities"] == "Mix of self-contained and shared facilities" }}>
+              <label class="govuk-label govuk-radios__label" for="facilities-3">
                 Mix of self-contained and shared facilities
               </label>
+
             </div>
           </div>
         </fieldset>
       </div>
 
+
+
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="new-reconstruction-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="new-reconstruction">
             Are the homes new builds or reconstructions?
-          </legend>
+          </label>
           <div id="new-reconstruction-hint" class="govuk-hint">
             Select how the homes will be built.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="new-build" name="new-build" type="radio" value="new build">
-              <label class="govuk-label govuk-radios__label" for="new-build">
+              <input class="govuk-radios__input" id="new-reconstruction-1" name="new-reconstruction" type="radio" value="New build"
+                {{"checked" if data["new-reconstruction"] == "New build" }}>
+              <label class="govuk-label govuk-radios__label" for="new-reconstruction-1">
                 New build
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reconstructions" name="reconstructions" type="radio" value="reconstructions">
-              <label class="govuk-label govuk-radios__label" for="reconstructions">
+              <input class="govuk-radios__input" id="new-reconstruction-2" name="new-reconstruction" type="radio" value="Reconstructions"
+                {{"checked" if data["new-reconstruction"] == "Reconstructions" }}>
+              <label class="govuk-label govuk-radios__label" for="new-reconstruction-2">
                 Reconstructions
               </label>
             </div>
+
           </div>
         </fieldset>
       </div>
 
+
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="tenant-input-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-label govuk-label--m" for="tenant-input">
             Have tenants had any input on design?
-          </legend>
+          </label>
           <div id="tenant-input-hint" class="govuk-hint">
             Select ‘yes’ if tenants have inputted into the design.
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="tenant-input-yes" name="tenant-input-yes" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="tenant-input-yes">
+              <input class="govuk-radios__input" id="tenant-input-1" name="tenant-input" type="radio" value="Yes"
+                {{"checked" if data["tenant-input"] == "Yes" }}>
+              <label class="govuk-label govuk-radios__label" for="tenant-input-1">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="tenant-input-no" name="tenant-input-no" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="tenant-input-no">
+              <input class="govuk-radios__input" id="tenant-input-2" name="tenant-input" type="radio" value="No"
+                {{"checked" if data["tenant-input"] == "No" }}>
+              <label class="govuk-label govuk-radios__label" for="tenant-input-2">
                 No
               </label>
             </div>
+
           </div>
         </fieldset>
-      </div>  
+      </div>
+
+
+
 
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
