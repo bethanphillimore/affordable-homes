@@ -23,53 +23,56 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form action="/local-housing-need" method="post" novalidate>
 
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
-            Enter the type of planning and application reference
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
+              Enter the type of planning and application reference
 
-          </h1>
-        </legend>
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Type of planning</h2>
-        <div id="site-hint" class="govuk-hint">
-          Select one option </div>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
-              aria-describedby="sign-in-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in">
-              Full planning permission </label>
+            </h1>
+          </legend>
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Type of planning</h2>
+          <div id="site-hint" class="govuk-hint">
+            Select one option </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="full-planning" name="type-of-planning" type="radio"
+                value="Full planning permission" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+                Full planning permission </label>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="outline-planning" name="type-of-planning" type="radio"
+                value="Outline planning permission" aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="sign-in-2">
+                Outline planning permission </label>
+
+            </div>
 
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify"
-              aria-describedby="sign-in-2-item-hint">
-            <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="sign-in-2">
-              Outline planning permission </label>
+
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Site planning application reference</h2>
+          <div id="site-hint" class="govuk-hint">
+            This can be a mix of numbers or letters. For example, 1862/16/FUL.</div>
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-20" id="planning-application-reference"
+              name="planning-application-reference" type="text" aria-describedby="site-planning-application-reference"
+              value="{{ data['planning-application-reference'] }}">
 
           </div>
+        </fieldset>
 
-        </div>
-
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Site planning application reference</h2>
-        <div id="site-hint" class="govuk-hint">
-          This can be a mix of numbers or letters. For example, 1862/16/FUL.</div>
-        <div class="govuk-form-group">
-
-          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
-        </div>
-      </fieldset>
-
-      <a href="local-housing-need.html" class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">
-        Save and continue
-      </a>
-    </div>
+        <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+          Save and continue
+        </button>
+      </div>
 
 
-
+    </form>
   </div>
 </div>
 
