@@ -4,6 +4,10 @@
 Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block header %}
+{% include "includes/navigation.html" %}
+{% endblock %}
+
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -40,14 +44,16 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="full-planning" name="type-of-planning" type="radio"
-                value="Full planning permission" aria-describedby="sign-in-item-hint">
+                value="Full planning permission" {{"checked" if data["type-of-planning"]=="Full planning permission" }}
+                aria-describedby="sign-in-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in">
                 Full planning permission </label>
 
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="outline-planning" name="type-of-planning" type="radio"
-                value="Outline planning permission" aria-describedby="sign-in-2-item-hint">
+                value="Outline planning permission" {{"checked" if
+                data["type-of-planning"]=="Outline planning permission" }} aria-describedby="sign-in-2-item-hint">
               <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="sign-in-2">
                 Outline planning permission </label>
 

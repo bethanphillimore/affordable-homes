@@ -4,6 +4,10 @@
 Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block header %}
+{% include "includes/navigation.html" %}
+{% endblock %}
+
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -36,7 +40,9 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="yes-all" name="m-m-c" type="radio"
-                value=" Yes, I’m using MMC for all the housing on this site." aria-describedby="yes-all-hint">
+                value=" Yes, I’m using MMC for all the housing on this site." {{"checked" if
+                data["m-m-c"]=="Yes, I’m using MMC for all the housing on this site." }}
+                aria-describedby="yes-all-hint">
               <label class="govuk-label govuk-radios__label" for="yes-all">
                 Yes, I’m using MMC for all the housing on this site.</label>
 
@@ -45,7 +51,8 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="yes-some" name="m-m-c" type="radio"
-                value="Yes, but only for some of the housing on a site." aria-describedby="no-none-hint">
+                value="Yes, but only for some of the housing on a site." {{"checked" if
+                data["m-m-c"]=="Yes, but only for some of the housing on a site." }} aria-describedby="no-none-hint">
               <label class="govuk-label govuk-radios__label " for="yes-some">
                 Yes, but only for some of the housing on a site. </label>
               <div id="yes-some-hint" class="govuk-hint govuk-radios__hint">
@@ -56,7 +63,8 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="no-none" name="m-m-c" type="radio"
-                value="No, I’m not using any MMC on this site." aria-describedby="no-none-hint">
+                value="No, I’m not using any MMC on this site." {{"checked" if
+                data["m-m-c"]=="No, I’m not using any MMC on this site." }} aria-describedby="no-none-hint">
               <label class="govuk-label govuk-radios__label govuk-!-margin-bottom-8" for="no-none">
                 No, I’m not using any MMC on this site. </label>
 

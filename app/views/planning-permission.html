@@ -4,6 +4,10 @@
 Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block header %}
+{% include "includes/navigation.html" %}
+{% endblock %}
+
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -44,16 +48,18 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="planning-permission-yes" name="planning-permission" type="radio"
                 value="Yes, I have full or outline planning permission for the whole site."
-                aria-describedby="sign-in-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in">
+                aria-describedby="yes-planning-hint" {{"checked" if
+                data["planning-permission"]=="Yes, I have full or outline planning permission for the whole site." }}>
+              <label class="govuk-label govuk-radios__label" for="planning-permission-yes">
                 Yes, I have full or outline planning permission for the whole site. </label>
 
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="planning-permission-no" name="planning-permission" type="radio"
-                value=" No, I don’t have planning permission for the whole site. "
-                aria-describedby="sign-in-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                value="No, I don’t have planning permission for the whole site." {{"checked" if
+                data["planning-permission"]=="No, I don’t have planning permission for the whole site." }}
+                aria-describedby="no-planning-hint">
+              <label class="govuk-label govuk-radios__label" for="planning-permission-no">
                 No, I don’t have planning permission for the whole site. </label>
 
             </div>
